@@ -60,8 +60,8 @@ export default function App() {
               )}
               renderHiddenItem={({ item }) => (
                 <View style={styles.del}>
-                  <TouchableOpacity onPress={() => pressHandler(item.key)}>
-                    <AntIcons name="delete" size={20} color="coral" />
+                  <TouchableOpacity  onPress={() => pressHandler(item.key)}>
+                    <Ionicons name="trash" size={20} color="#fff" />
                   </TouchableOpacity>
                 </View>
               )}
@@ -96,5 +96,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     flexDirection: "row",
     alignItems: "center",
+    backgroundColor: '#000'
   },
+ 
 });

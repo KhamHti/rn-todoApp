@@ -4,11 +4,12 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function TodoItem({ item, pressHandler }) {
   return (
-    <View>
-      <View style={styles.item}>
-        <Ionicons name="home-sharp" size={18} color="#FFF" />
-        <Text style={styles.itemText}>{item.text}</Text>
-      </View>
+    <View style={styles.item}>
+      <Ionicons name="home-sharp" size={18} color="#FFF" />
+      <Text style={styles.itemText}>{item.text}</Text>
+      <TouchableOpacity onPress={() => pressHandler(item.key)}>
+        <Ionicons name="trash" size={20} color="#fff" />
+      </TouchableOpacity>
     </View>
   );
 }
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     flexDirection: "row",
     backgroundColor: "coral",
+    justifyContent: "space-between",
   },
   itemText: {
     marginLeft: 10,
